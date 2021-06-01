@@ -7,9 +7,20 @@ export class TodoList {
     this.todos.push(todo);
   }
 
-  eliminarTodo(id) {}
+  eliminarTodo(id) {
+    this.todos = this.todos.filter((todo) => todo.id != id);
+  }
 
-  marcarCompletado(id) {}
+  marcarCompletado(id) {
+    for (const todo of this.todos) {
+      if (todo.id == id) {
+        todo.completado = !todo.completado;
+        break;
+      }
+    }
+  }
 
-  eliminarCompletados() {}
+  eliminarCompletados() {
+    this.todos = this.todos.filter((todo) => !todo.completado);
+  }
 }
