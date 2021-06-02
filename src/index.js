@@ -1,10 +1,10 @@
-import "./styles.css";
+import './styles.css';
 
-import { Todo, TodoList } from "./classes";
-import { crearTodoHtml } from "./js/componentes";
+import { Todo, TodoList } from './classes';
+import { crearTodoHtml } from './js/componentes';
 
 export const todoList = new TodoList();
-const tarea = new Todo("Aprender JavaScript");
+const tarea = new Todo('Aprender JavaScript');
 
 todoList.nuevoTodo(tarea);
 
